@@ -78,7 +78,7 @@ public class Test {
 			round(house);
 		}
 		
-		//-----------
+		//-----------------------------------------
 		
 		allRooms.add(house.getBathroom());
 		allRooms.add(house.getBedroom());
