@@ -7,3 +7,19 @@ data gaat is security van essentieel belang. Dusdanig is dit één van de voorde
 want alle data wordt niet opgeslagen op de gebruikers hun machine maar op een centraal geplaatste server. Doordat deze centraal gestockeerd is kan deze
 data ook makkelijk onderhouden worden. 
 
+2) Hoe zou je logging in deze applicatie implementeren? Illustreer met een tekening.
+
+Ik zou telkens als er een data uitwisseling plaatsvindt tussen één van de verschillende 
+lagen van de applicatie een log file laten generen en deze vervolgens op een centrale plaats 
+opslagen. Zodanig kan men achteraf makkelijk de samenhang leggen tussen de verschillende info
+die zich in de logging file bevindt. 
+
+3/ Waar zit het grootste risico in deze architectuur?
+
+Communicatie en operationeel managment.
+
+4/ Beschrijf in je eigen woorden wat software architectuur is.
+
+Software architectuur is net hetzelfde als architectuur van een gewoon gebouw. Enkel draait het hierin niet om het ontwerpen van een gebouw 
+maar van de software. Doormiddal van dit probeert men een oplossing te creeëren die voldoet aan alle voorwaarde die verbonden zijn met de software en probeert
+men ook alle basis attributen van software te verbeteren. 

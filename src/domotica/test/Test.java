@@ -3,6 +3,7 @@ package domotica.test;
 import java.util.*;
 
 import domotica.command.setAllDoorsClosed;
+import domotica.command.setAllDoorsOpen;
 import domotica.model.*;
 import domotica.view.*;
 
@@ -17,6 +18,11 @@ public class Test {
 	private static float randomFloat(float lo, float hi) {
 		return lo + random.nextFloat() * (hi - lo);
 	}
+	
+	private static Room randomRoom(House house) {
+		return random.toString();
+	}
+
 
 	private static void round(House house) throws DomoticaException {
 		{
@@ -67,19 +73,20 @@ public class Test {
 	public static void main(String[] args) throws DomoticaException {
 		House house = new House("house");
 		new HouseView(house);
+		List<Room>allRooms = new ArrayList<Room>();
 		for (int i = 0; i < 100; i++) {
 			round(house);
 		}
 		
 		//-----------
 		
-		List<Room>allRooms = new ArrayList<Room>();
-		
 		allRooms.add(house.getBathroom());
-		
+		allRooms.add(house.getBedroom());
+		allRooms.add(house.getKitchen());
+		allRooms.add(house.getLiving());
 		
 		setAllDoorsClosed closeAllDoors = new setAllDoorsClosed(allRooms);
-		
+		setAllDoorsOpen openAllDoors = new setAllDoorsOpen(allRooms);
 		}
 
 }
